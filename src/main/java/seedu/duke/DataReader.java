@@ -71,6 +71,16 @@ public class DataReader {
         return modules;
     }
 
+    public ArrayList<Module> findModules(String nusModuleCode) {
+        ArrayList<Module> modules = new ArrayList<>();
+        for (Module module : this.puModules) {
+            if (module.getNusModuleCode().equals(nusModuleCode)) {
+                modules.add(module);
+            }
+        }
+        return modules;
+    }
+
     public void main(String[] args) {
         DataReader dr = new DataReader();
         System.out.println(dr.getUniversities());
